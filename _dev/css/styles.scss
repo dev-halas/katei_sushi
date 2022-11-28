@@ -1,0 +1,23 @@
+@import url("https://unpkg.com/swiper/swiper-bundle.min.css");
+@import url("https://unpkg.com/aos@2.3.1/dist/aos.css");
+
+/* ------ Layouts ------ */
+@import "./layout/reset.scss";
+@import "./layout/core.scss";
+@import "./layout/navbar.scss";
+@import "./layout/animations.scss";
+@import "./layout/footer.scss";
+@import "./layout/grid.scss";
+@import "./layout/menu.scss";
+@import "./layout/article.scss";
+@import "./layout/header.scss";
+
+/* ------ Components ------ */
+
+@import "./components/swiper.scss";
+@import "./components/welcome.scss";
+@import "./components/about_us.scss";
+@import "./components/menu_home.scss";
+@import "./components/news.scss";
+@import "./components/katei_team.scss";
+@import "./components/delivery.scss";

@@ -1,0 +1,97 @@
+.menu-home {
+    overflow: hidden;
+    position: relative;
+    margin-top: -100px;
+    z-index: 99;
+}
+
+.menu-home__content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+
+.menu-home__ilustration {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    width: 60vw;
+}
+
+.menu-home__img1 {
+    position: absolute;
+    top: 250px;
+    left: 100px;
+}
+
+.menu-home__contentInner{
+    position: relative;
+    width: 36vw;
+    padding: 50px;
+    background-color: #fff;
+    height: 250px;
+    margin-bottom: 100px;
+    margin-top: 20vh;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.menu-home__contentInner-text a{
+   margin-top: 40px;
+}
+
+.menu-home__content-menuImage {
+    position: absolute;
+    right: -270px;
+    top: -100px;
+    z-index: 40;
+}
+
+.menu-home__content-menuButton {
+    position: absolute;
+    background-color: $dark;
+    padding: 60px 60px;
+    right: -60px;
+    bottom: -20px;
+    z-index: 50;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.menu-home__accent {
+    position: absolute;
+    width: 10vw;
+    right: 0;
+    top: -80px;
+    z-index: 10;
+    background-color: $accent;
+    height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-home__contentInner{
+        width: 80vw;
+        padding: 30px;
+        height: 230px;
+    }
+
+    .menu-home__content {
+        height: 600px;
+    }
+
+    .menu-home__ilustration {
+        position: absolute;
+        right: 0;
+        top: 80px;
+        width: 80vw;
+    }
+    .menu-home__img1 {
+        left: 0px;
+    }
+
+    .menu-home__content-menuButton {
+        padding: 40px;
+        bottom: 30px;
+    }
+}

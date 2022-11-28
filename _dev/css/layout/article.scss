@@ -1,0 +1,30 @@
+.articleContainer {
+    max-width: 1000px;
+    margin: auto;
+    font-size: 18px;
+}
+
+.articleContainer h1, h2, h3 {
+    line-height: 2em;
+}
+
+.articleContainer p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 200;
+    color: #777;
+}
+
+@media only screen and (max-width: 600px) {
+    .articleContainer {
+        max-width: 92vw;
+        margin: auto;
+        position: relative;
+        padding: 0px 15px;
+    }
+
+    .articleContainer p {
+        font-size: 15px;
+    }
+    
+}

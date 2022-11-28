@@ -1,0 +1,33 @@
+.deliveryZone__left {
+    position: relative;
+}
+
+.deliveryZone__accent {
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+    width: 200px;
+    height: 700px;
+    background-color: $accent;
+    z-index: 99;
+}
+
+.deliveryZone__Title {
+    margin-left: 5vw;
+    margin-bottom: 80px;
+}
+
+.deliveryZone__Text {
+    padding-left: 40px;
+    padding-right: 15px;
+    border-left: 16px solid $accent;
+    margin-left: 5vw;
+    margin-right: 10vw;
+    margin-bottom: 80px;
+}
+
+@media only screen and (max-width: 768px) {
+    .deliveryZone__accent {
+        display: none;
+    }
+}

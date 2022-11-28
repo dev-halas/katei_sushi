@@ -1,0 +1,210 @@
+.welcome {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.welcome__leftAccent {
+    position: absolute;
+    top: 0px;
+    height: 100vh;
+    width: 5vw;
+    background-color: $accent;
+}
+
+.welcome__image {
+    position: absolute;
+    z-index: 99;
+    max-width: 50vw;
+    animation: welcome__image 2s ease-in-out .5s both;
+    right: 5vw;
+    opacity: 0;
+    bottom: -5vh;
+    -webkit-animation: welcome__image 2s ease-in-out .5s both;
+}
+
+.welcome__image-verical {
+    position: absolute;
+    top: 0;
+    right: 100px;
+    z-index: -99;
+    height: 100vh;
+    width: 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: welcome__Vertical 1s ease-in-out 1s forwards;
+    animation-name: welcome__Vertical;
+    transform: translateY(150%);
+}
+
+.welcome__wrapper {
+    display: grid;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.welcome__wrapperText {
+    align-self: end;
+}
+
+.welcome__title {
+    font-size: 70px;
+    margin-top: 15vh;
+}
+
+.welcome__subTitle {
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.welcome__text {
+    max-width: 500px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.welcome__content {
+    align-self: end;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.welcome__content > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcome__content img {
+    margin-bottom: 15px;
+}
+
+.welcome__content p{
+    color: #fff;
+    text-align: center;
+}
+    
+.welcome__content-adress { 
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: $dark;
+}
+.welcome__content-phone { 
+    grid-area: 1 / 3 / 2 / 4;
+    background-color: $dark;
+}
+.welcome__content-image1 { grid-area: 1 / 4 / 2 / 5; background-size: cover; background-position: center; }
+.welcome__content-image2 { grid-area: 2 / 1 / 3 / 2; background-size: cover; background-position: center; }
+
+.welcome__content-image1:after,
+.welcome__content-image2:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.welcome__content-mail { 
+    grid-area: 2 / 2 / 3 / 3; 
+    background-color: $accent;
+}
+.welcome__content-mail p {
+    color: $dark;
+}
+
+.welcome__content-japanese {
+    grid-area: 2 / 4 / 3 / 3;
+}
+
+.welcome__content-japanese > img {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.welcome__content-empty { 
+    grid-area: 2 / 5 / 3 / 8;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .welcome__image {
+        bottom: -2vh;
+        max-width: 65vw;
+    }
+
+    .welcome__image-verical {
+        width: 20%;
+    }
+
+    .welcome__wrapperText {
+        max-width: 60vw;
+    }
+
+    .welcome__title {
+        font-size: 30px;
+        margin-top: 5vh;
+    }
+
+    .welcome__subTitle {
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .welcome__text {
+        font-size: 14px;
+        font-weight: 300;
+        max-width: 50vw;
+        margin-bottom: 20px;
+    }
+
+    .welcome__image-verical {
+        right: 50px;
+    }
+
+    .welcome__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .welcome__content > * {
+        height: 14vh;
+    }
+
+    .welcome__content img {
+        max-width: 25px;
+        margin-bottom: 5px;
+    }
+
+    .welcome__content p {
+        font-size: 13px;
+        font-weight: 100;
+    }
+
+    .welcome__content-phone { grid-area: 1 / 1 / 2 / 2; }
+    .welcome__content-adress {  grid-area: 3 / 1 / 4 / 2;}
+    .welcome__content-mail { grid-area: 2 / 1 / 3 / 2; }
+    
+    .welcome__content-image1,
+    .welcome__content-image2,
+    .welcome__content-empty { 
+        display: none;
+    }
+
+    .welcome__content-japanese {
+        grid-area: 1 / 2 / 2 / 2;
+    }
+
+    .welcome__content-japanese > img {
+        max-width: 80px;
+        margin-bottom: 0;
+    }
+}
+
+
+

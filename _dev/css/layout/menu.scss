@@ -1,0 +1,300 @@
+.menuKatei {
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+.menuLinks{
+    grid-column: span 1;
+}
+
+.mobile {
+    display: none;
+}
+
+.menuLink {
+    width: 260px;
+    max-width: 100%;
+    background-color: $dark;
+    color: $accent;
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    display: block;
+}
+
+.menuLink.active {
+    background-color: $accent;
+    color: $dark;
+}
+
+.menuContent {
+    grid-column: span 2;
+}
+
+.menuContent__tab {
+    display: none;
+}
+  
+.menuContent__tab.active {
+    display: block;
+    padding-bottom: 100px;
+}
+
+.menuContent__tab-title {
+    margin-bottom: 50px;
+    color: $accent;
+}
+
+.menuContent__tab-category {
+    font-size: 24px;
+    color: #999;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+
+.menuContent__tab-dish {
+    margin-top: 8px;
+    margin-bottom: 12px;
+    max-width: 800px;
+    position: relative;
+    border-bottom: 2px dashed $accent;
+}
+
+.menuContent__tab-dish h3:last-child {
+    margin-top: 10px;
+    position: absolute;
+    right: 0;
+}
+
+.menuContent__tab-dishName {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.menuContent__tab-dishIng {
+    color: #999;
+    font-size: 14px;
+    text-transform: uppercase;
+    max-width: 500px;
+    margin-bottom: 6px;
+}
+
+.menuContent__shortText {
+    padding: 5px 10px;
+    background-color: $accent;
+    display: block;
+    margin: 20px 0px 30px 0px;
+    max-width: 800px;
+}
+
+.menu__content-img {
+    padding-bottom: 20px;
+    max-width: 800px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .mobile {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        z-index: 99;
+        background-color: #000;
+        color: $accent;
+        border: none;
+        border-bottom: 2px dashed $accent;
+        width: 100%;
+        outline: none;
+        padding: 15px 20px;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        transition: all .5s ease-in-out;
+    }
+
+    .mobile p {
+        color: $accent;
+        font-size: 20px;
+    }
+
+    .menu__content-img {
+        max-width: 100%;
+    }
+
+    @keyframes arrowmenu {
+        from {
+            transform: rotate(-90deg);
+            transform: translateX(-5px);
+            -webkit-transform: translateX(-5px);
+            -moz-transform: translateX(-5px);
+            -ms-transform: translateX(-5px);
+            -o-transform: translateX(-5px);
+        }
+
+        to {
+            transform: translateX(5px);
+            -webkit-transform: translateX(5px);
+            -moz-transform: translateX(5px);
+            -ms-transform: translateX(5px);
+            -o-transform: translateX(5px);
+        }
+    }
+    
+
+    .arrowCta {
+        display: block;
+        height: 13px;
+        width: 13px;
+        border: 11px solid transparent;
+        transform: rotate(136deg);
+        position: relative;
+        margin-top: 5px;
+        margin-left: 40px;
+        transition: all .5s ease-in-out;
+        -webkit-transform: rotate(136deg);
+        -moz-transform: rotate(136deg);
+        -ms-transform: rotate(136deg);
+        -o-transform: rotate(136deg);
+}
+      
+      .arrowCta:after,
+      .arrowCta:before {
+        content: "";
+        display: block;
+        height: inherit;
+        width: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      
+      .arrowCta:after {
+        border-bottom: 3px solid $accent;
+        border-right: 3px solid $accent;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        animation: bottom-arrow 1.65s infinite;
+      }
+      
+      @keyframes bottom-arrow {
+        0% {
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+        45% {
+          opacity: 0;
+          transform: translate(12px, 12px);
+        }
+        46% {
+          opacity: 0;
+          transform: translate(-16px, -16px);
+        }
+        90% {
+          opacity: 1;
+          transform: translate(-6px, -6px);
+        }
+        100% {
+          opacity: 1;
+          transform: translate(-6px, -6px);
+        }
+      }
+      
+      .arrowCta:before {
+        top: 0;
+        left: 0;
+        border-bottom: 3px solid $accent;
+        border-right: 3px solid $accent;
+        animation: top-arrow 1.65s infinite;
+      }
+      
+      @keyframes top-arrow {
+        0% {
+          transform: translate(-6px, -6px);
+        }
+        35% {
+          transform: translate(0, 0);
+        }
+        90% {
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+      }
+
+    .mobile--opened {
+        z-index: 999;
+    }
+
+    .mobile--opened .arrowCta {
+        transform: rotate(44deg);
+        margin-top: -10px;
+        -webkit-transform: rotate(44deg);
+        -moz-transform: rotate(44deg);
+        -ms-transform: rotate(44deg);
+        -o-transform: rotate(44deg);
+}
+
+    .menuContent {
+        grid-column: span 3;
+    }
+
+    .menuLinks{
+        grid-column: span 3;
+        transform: translateY(120vh);
+        background-color: $accent;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 99;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        transition: all .5s ease-in-out;
+        -webkit-transform: translateY(120vh);
+        -moz-transform: translateY(120vh);
+        -ms-transform: translateY(120vh);
+        -o-transform: translateY(120vh);
+    }
+
+    .menuLink {
+        width: 220px;
+        font-size: 12px;
+        padding: 10px 15px;
+        margin-bottom: 5px;
+    }
+
+    .menuLink.active {
+        border: 2px solid $dark;
+        padding: 8px 12px;
+    }
+
+    .menuLinks--opened{
+        transform: translateX(0vh);
+        -webkit-transform: translateX(0vh);
+        -moz-transform: translateX(0vh);
+        -ms-transform: translateX(0vh);
+        -o-transform: translateX(0vh);
+}
+    .menuLinks--closed{
+        transform: translateX(-120vw);
+        -webkit-transform: translateX(-120vw);
+        -moz-transform: translateX(-120vw);
+        -ms-transform: translateX(-120vw);
+        -o-transform: translateX(-120vw);
+}
+
+    .menuContent__tab-dish h3:last-child {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+
+
+
+$accent: #ffe5b4;
+$dark: #2a2b2c;
+$grey: #777;
+
+body {
+    font-display: swap;
+    overflow-x: hidden!important;
+}
+
+body,
+a,
+p {
+    font-family: 'Cabin', sans-serif;
+    color: $dark;
+    font-size: 16px;
+    line-height: 1.6em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.2em;
+}
+
+section {
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+
+a {
+    text-decoration: none;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+/* button */ 
+
+.button {
+    position: relative;
+    display: block;
+    line-height: 62px;
+    color: #000;
+    background-size: cover;
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    transition: all 0.6s; 
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.0' viewBox='0 0 2000 870' preserveAspectRatio='xMidYMid meet'%3e%3cg id='layer101' fill='%232a2b2c' stroke='none'%3e%3cpath d='M90 790 l0 -60 -46 0 -45 0 3 -37 c3 -37 4 -38 42 -37 l38 1 -6 -221 c-9 -274 -9 -276 -47 -276 -16 0 -29 -4 -29 -10 0 -5 13 -10 30 -10 28 0 30 -2 30 -41 0 -33 3 -40 16 -35 9 3 24 6 35 6 15 0 19 7 19 36 l0 36 403 -6 c221 -3 612 -9 870 -12 l467 -6 0 -27 c0 -36 11 -71 21 -71 5 0 9 22 9 49 l0 50 48 3 c45 3 47 4 50 36 l3 32 -50 0 -50 0 5 233 c3 127 7 238 10 245 2 7 20 12 44 12 22 0 40 5 40 10 0 6 -18 10 -40 10 l-40 0 0 50 c0 46 -2 50 -24 50 -13 0 -32 3 -40 6 -14 6 -16 -1 -10 -50 l7 -56 -84 0 c-262 1 -1641 29 -1645 33 -3 3 -8 30 -11 61 -8 74 -23 72 -23 -4z m1764 -262 c4 -79 9 -187 12 -240 l6 -98 -118 0 c-66 -1 -456 -7 -869 -14 -412 -8 -751 -13 -751 -12 -1 0 -5 112 -9 248 l-7 248 428 3 c236 1 625 3 865 5 l437 2 6 -142z'/%3e%3c/g%3e%3c/svg%3e");
+  }
+  
+  .button:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  
+  .button:hover:before{
+    content: "";
+    position: absolute;
+    background: #ffe5b4;
+    width: 112px; 
+    height: 22px;
+    left: 18px;
+    top: 20px;
+    z-index: -1;
+    display: block;
+  }
+
+

@@ -1,0 +1,28 @@
+.footerContent {
+    background-color: $dark;
+    padding: 80px 0px;
+}
+
+.footerLogo {
+    filter: invert(1);
+}
+
+.footerContent__title {
+    color: #fff;
+}
+
+.footerContent p {
+    color: #fff;
+}
+
+.footerMenu ul li a {
+    color: #fff;
+}
+
+.footerCopyright {
+    background-color: $accent;
+    color: $dark;
+    text-align: center;
+    font-weight: 600;
+    padding: 40px;
+}
